@@ -13,18 +13,17 @@ function new_image(get_image)
 {
 	// to upload images
 	fabric.image.fromURL(get_image, function(Img) {
-	block_image_object = Irg;
+	block_image_object = Img;
 
 	block_image_object.scaleToWidth(block_image_object);
 	block_image_object.scaleToHeight(block_image_object);
 	block_image_object.set({
-	top:block_y
+	top:block_y,
 	left:block_x
 	});
 	canvas.add(block_image_object);
 	});
-	}
-	}
+	
 }
 
 window.addEventListener("keydown", my_keydown);
