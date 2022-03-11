@@ -13,13 +13,14 @@ function new_image(get_image)
 {
 	// to upload images
 	fabric.Image.fromURL(get_image, function(Img) {
-	block_image_object = img;
+	block_image_object = Img;
 
-	block_image_object.scaleToWidth(block_image_object);
-	block_image_object.scaleToHeight(block_image_object);
+	block_image_object.scaleToWidth(block_image_width);
+	block_image_object.scaleToHeight(block_image_height);
 	block_image_object.set({
-	top:block_y,top:block_y 
-	left:block_x
+	top:block_y,
+	top:block_y
+	
 	});
 	canvas.add(block_image_object);
 	});
@@ -34,8 +35,9 @@ console.log(keyPressed);
 
 	if(keyPressed == '82') // add appropriate keycode
 	{
+		block_x =200;
 		// upload red ranger
-		new_image('rrl.png');
+		new_image('rr1.png');
 		console.log("r");
 	}
 	if(keyPressed == '71')
